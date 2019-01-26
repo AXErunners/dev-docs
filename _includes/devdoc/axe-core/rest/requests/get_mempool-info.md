@@ -61,7 +61,7 @@ GET /mempool/info.json
 Get memory pool info in JSON:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/mempool/info.json
+curl http://localhost:19337/rest/mempool/info.json
 {% endhighlight %}
 
 Result (whitespace added):

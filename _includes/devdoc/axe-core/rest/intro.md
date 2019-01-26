@@ -10,8 +10,8 @@ http://opensource.org/licenses/MIT.
 {% autocrossref %}
 
 Axe Core provides an **unauthenticated** HTTP REST interface.  The interface
-runs on the same port as the JSON-RPC interface, by default port 9998 for
-mainnet and port 19998 for testnet. It must be enabled by either starting Axe
+runs on the same port as the JSON-RPC interface, by default port 9337 for
+mainnet and port 19337 for testnet. It must be enabled by either starting Axe
 Core with the `-rest` option or by specifying `rest=1` in the
 configuration file. Make sure that the RPC interface is also activated.
 Set `server=1` in `axe.conf` or supply the `-server` argument when

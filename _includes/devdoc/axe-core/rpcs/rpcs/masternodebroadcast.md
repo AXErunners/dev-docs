@@ -275,7 +275,7 @@ Result:
 {
   "36b753f9c8d328d405b8a909bbf4fd29c0d37aa48eae98fa1289b90e36e002c4": {
     "outpoint": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1",
-    "addr": "45.32.237.76:19999",
+    "addr": "45.32.237.76:19937",
     "pubKeyCollateralAddress": "yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh",
     "pubKeyMasternode": "yj25teTD6yjcNpQC7inq72tDgsivG6xLZM",
     "vchSig": "H4qb8eeBjHNSyKAr0xpNobuNiOkcipxxUa/Adramj1TJCHqYGngOYnnp17c5QO56rWXCjkhGVzv/p0UYRDOA394=",
@@ -372,7 +372,7 @@ Result:
 {
   "36b753f9c8d328d405b8a909bbf4fd29c0d37aa48eae98fa1289b90e36e002c4": {
     "outpoint": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1",
-    "addr": "45.32.237.76:19999",
+    "addr": "45.32.237.76:19937",
     "36b753f9c8d328d405b8a909bbf4fd29c0d37aa48eae98fa1289b90e36e002c4": "successful"
   },
   "overall": "Successfully relayed broadcast messages for 1 masternodes, failed to relay 0, total 1"

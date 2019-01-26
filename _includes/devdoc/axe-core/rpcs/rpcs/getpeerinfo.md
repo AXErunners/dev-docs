@@ -41,7 +41,7 @@ The `getpeerinfo` RPC {{summary_getPeerInfo}}
 - n: "→ →<br>`addrlocal`"
   t: "string"
   p: "Optional<br>(0 or 1)"
-  d: "Our IP address and port number according to the remote node.  May be incorrect due to error or lying.  Most SPV nodes set this to `127.0.0.1:9999`"
+  d: "Our IP address and port number according to the remote node.  May be incorrect due to error or lying.  Most SPV nodes set this to `127.0.0.1:9937`"
 
 - n: "→ →<br>`services`"
   t: "string (hex)"
@@ -178,7 +178,7 @@ Result (edited to show only a single entry, with IP addresses changed to
 [
   {
     "id": 3,
-    "addr": "192.0.2.113:19999",
+    "addr": "192.0.2.113:19937",
     "addrlocal": "127.0.0.1:56332",
     "services": "0000000000000005",
     "relaytxes": true,

@@ -153,7 +153,7 @@ GET /block/notxdetails/<hash>.<format>
 Request a block in hex-encoded serialized block format:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
+curl http://localhost:19337/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
 {% endhighlight %}
 
 Result (wrapped):
@@ -177,7 +177,7 @@ d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000
 Get the same block in JSON:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
+curl http://localhost:19337/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
 {% endhighlight %}
 
 Result (whitespace added):

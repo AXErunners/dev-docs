@@ -134,7 +134,7 @@ GET /headers/<count>/<hash>.<format>
 Request 2 block headers in hex-encoded serialized block format:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
+curl http://localhost:19337/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
 {% endhighlight %}
 
 Result (wrapped):
@@ -150,7 +150,7 @@ e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3\
 Get the same block headers in JSON:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
+curl http://localhost:19337/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
 {% endhighlight %}
 
 Result (whitespace added):

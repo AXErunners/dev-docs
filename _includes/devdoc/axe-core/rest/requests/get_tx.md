@@ -85,7 +85,7 @@ GET /tx/<txid>.<format>
 Request a transaction in hex-encoded serialized transaction format:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.hex
+curl http://localhost:19337/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.hex
 {% endhighlight %}
 
 Result (wrapped):
@@ -103,7 +103,7 @@ fc8f65e2ecc078ecad42b23462f27832b441ffa5feffffff0200e1f505000000\
 Get the same transaction in JSON:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.json
+curl http://localhost:19337/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.json
 {% endhighlight %}
 
 Result (whitespace added):

@@ -36,8 +36,8 @@ The following constants and defaults are taken from Axe Core's
 
 | Network | Default Port | Magic Value | [Start String][/en/glossary/start-string]{:#term-start-string}{:.term} | Max nBits
 |---------|--------------|-----------------------------------------------|---------------
-| Mainnet | 9999         | 0xBD6B0CBF  | 0xBF0C6BBD                      | 0x1e0ffff0
-| Testnet | 19999        | 0xFFCAE2CE  | 0xCEE2CAFF                      | 0x1e0ffff0
+| Mainnet | 9937         | 0x5BECB640  | 0xB5CE6B04                      | 0x1e0ffff0
+| Testnet | 19937        | 0xFFCAE2CE  | 0xCEE2CAFF                      | 0x1e0ffff0
 | Regtest | 19994        | 0xDCB7C1FC  | 0xFCC1B7DC                      | 0x207fffff
 | Devnet  | User-defined | 0xCEFFCAE2  | 0xE2CAFFCE                      | 0x207fffff
 
@@ -2725,7 +2725,7 @@ Masternode Unspent Outpoint
 
 Masternode Address
 | 00000000000000000000ffffc0000233 ......... IP Address: ::ffff:192.0.2.51
-| 270f ..................................... Port: 9999
+| 270f ..................................... Port: 9937
 
 Collateral Public Key
 | 21 ....................................... Key Size: 33

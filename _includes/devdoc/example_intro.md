@@ -20,7 +20,7 @@ Once installed, you'll have access to three programs: `axed`,
   enter the RPC commands used throughout this document.
 
 * `axed` is more useful for programming: it provides a full peer
-  which you can interact with through RPCs to port 9998 (or 19998
+  which you can interact with through RPCs to port 9337 (or 19337
   for testnet / 18332 for regtest).
 
 * `axe-cli` allows you to send RPC commands to `axed` from the

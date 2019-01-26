@@ -188,7 +188,7 @@ GET /chaininfo.json
 Get blockchain info in JSON:
 
 {% highlight bash %}
-curl http://localhost:19998/rest/chaininfo.json
+curl http://localhost:19337/rest/chaininfo.json
 {% endhighlight %}
 
 Result (whitespace added):

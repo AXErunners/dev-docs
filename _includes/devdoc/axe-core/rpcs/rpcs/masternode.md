@@ -249,7 +249,7 @@ Result:
 {% highlight json %}
 {
   "height": 37375,
-  "IP:port": "108.61.192.47:19999",
+  "IP:port": "108.61.192.47:19937",
   "protocol": 70208,
   "outpoint": "3df7fb192e21c34da99bdd10c34e58ecaf3f3c37d6b2289f0ffedba5050188cc-1",
   "payee": "ydGgePy4a3zza37Zm4D44B99czyo6TftU1",
@@ -617,7 +617,7 @@ Result:
 {% highlight json %}
 {
   "outpoint": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f-1",
-  "service": "45.32.237.77:19999",
+  "service": "45.32.237.77:19937",
   "payee": "yY6AmGopsZS31wy1JLHR9P6AC6owFaXwuh",
   "status": "Masternode successfully started"
 }
@@ -716,7 +716,7 @@ Result:
 {
   "masternode": {
     "alias": "MN01",
-    "address": "45.32.237.77:19999",
+    "address": "45.32.237.77:19937",
     "privateKey": "92woG282ZQMASn8BAah6H8QmiE5NsPwucv7cu9eTVG1uU63fcfs",
     "txHash": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f",
     "outputIndex": "1",
@@ -724,7 +724,7 @@ Result:
   },
   "masternode": {
     "alias": "MN02",
-    "address": "45.32.237.78:19999",
+    "address": "45.32.237.78:19937",
     "privateKey": "92woG282ZQMASn8BAah6H8QmiE5NsPwucv7cu9eTVG1uU63fcfs",
     "txHash": "f6c83fd96bfaa47887c4587cceadeb9af6238a2c86fe36b883c4d7a6867eab0f",
     "outputIndex": "1",
@@ -799,7 +799,7 @@ Result:
 {% highlight json %}
 {
   "height": 37384,
-  "IP:port": "145.239.235.17:29999",
+  "IP:port": "145.239.235.17:29937",
   "protocol": 70208,
   "outpoint": "66eddd00e5927d0a03437d5b8a2f15367c978ef7951c80ae1608a45b1bf64318-1",
   "payee": "yY3q6wqRe1y7xzHbGE88YfRg4t97GU7BJ6",

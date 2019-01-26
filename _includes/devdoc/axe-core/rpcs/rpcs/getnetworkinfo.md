@@ -188,7 +188,7 @@ Result (actual addresses<!--noref--> have been replaced with [RFC5737][] reserve
   "localaddresses": [
     {
       "address": "192.0.2.113",
-      "port": 19999,
+      "port": 19937,
       "score": 4
     }
   ],

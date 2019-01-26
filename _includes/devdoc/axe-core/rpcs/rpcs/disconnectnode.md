@@ -40,7 +40,7 @@ The `disconnectnode` RPC {{summary_disconnectNode}}
 Disconnects following node from your node.
 
 {% highlight bash %}
-axe-cli -testnet disconnectnode 192.0.2.113:19999
+axe-cli -testnet disconnectnode 192.0.2.113:19937
 {% endhighlight %}
 
 Result (no output from `axe-cli` because result is set to `null`).

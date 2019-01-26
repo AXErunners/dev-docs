@@ -60,8 +60,8 @@ provide dynamic DNS seed servers which automatically get IP addresses
 of active nodes by scanning the network; others provide static DNS
 seeds that are updated manually and are more likely to provide IP
 addresses for inactive nodes. In either case, nodes are added to the
-DNS seed if they run on the default Axe ports of 9999 for mainnet
-or 19999 for testnet.
+DNS seed if they run on the default Axe ports of 9937 for mainnet
+or 19937 for testnet.
 
 <!-- paragraph below based on Greg Maxwell's email in
      http://comments.gmane.org/gmane.comp.bitcoin.devel/5378 -->

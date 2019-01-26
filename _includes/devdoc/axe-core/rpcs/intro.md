@@ -36,8 +36,8 @@ scratch. Axe Core also ships with its own compiled C++ RPC client,
 languages lacking a suitable native client. The remainder of this section
 describes the Axe Core RPC protocol in detail.
 
-The Axe Core RPC service listens for HTTP `POST` requests on port 9998 in
-mainnet mode, 19998 in testnet, or 18332 in regtest mode. The port number can be changed
+The Axe Core RPC service listens for HTTP `POST` requests on port 9337 in
+mainnet mode, 19337 in testnet, or 18332 in regtest mode. The port number can be changed
 by setting `rpcport` in `axe.conf`. By default the RPC service binds to your
 server's [localhost][Localhost] loopback
 network<!--noref--> interface so it's not accessible from other servers.
@@ -128,7 +128,7 @@ curl --user 'my_username:my_secret_password' --data-binary '''
       "params": [0],
       "id": "foo"
   }''' \
-  --header 'Content-Type: text/plain;' localhost:9998
+  --header 'Content-Type: text/plain;' localhost:9337
 {% endhighlight %}
 
 The HTTP response data for this request would be:
@@ -208,7 +208,7 @@ curl --user 'my_username:my_secret_password' --data-binary '''
       "id": "foo2"
     }
   ]''' \
-  --header 'Content-Type: text/plain;' localhost:9998
+  --header 'Content-Type: text/plain;' localhost:9337
 {% endhighlight %}
 
 To keep this documentation compact and readable, the examples for each of the

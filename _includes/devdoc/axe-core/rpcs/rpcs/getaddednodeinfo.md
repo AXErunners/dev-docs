@@ -95,11 +95,11 @@ Result (real hostname and IP address replaced with [RFC5737][] reserved address)
 {% highlight json %}
 [
   {
-    "addednode": "192.0.2.113:19999",
+    "addednode": "192.0.2.113:19937",
     "connected": true,
     "addresses": [
       {
-        "address": "192.0.2.113:19999",
+        "address": "192.0.2.113:19937",
         "connected": "outbound"
       }
     ]
