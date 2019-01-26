@@ -1,0 +1,61 @@
+language: ruby
+rvm:
+  - "2.5.0"
+sudo: false
+cache: bundler
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/doxygen-install
+env:
+  # http://docs.travis-ci.com/user/environment-variables/#Global-Variables
+  global:
+    - BITCOINORG_BUILD_TYPE=deployment
+    - DOXYFILE: Doxyfile-axedocs
+
+# Install dependencies
+addons:
+  apt:
+    packages:
+      - flex
+      - bison
+      - build-essential
+      - graphviz
+
+before_install:
+  - gem update --system
+  - gem install bundler
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x scripts/build-install-doxygen.sh
+  - ./scripts/build-install-doxygen.sh
+
+script: make travis
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x scripts/generateDocumentationAndDeploy.sh
+  - ./scripts/generateDocumentationAndDeploy.sh
+
+deploy:
+  # Set these environment variables in travis-ci.org settings for the repo:
+  #
+  # GITHUB_TOKEN: token that allows Travis to deploy to GitHub (mark secure)
+  # DEPLOY_REPO_NAME: GitHub repo to deploy to (i.e axe-docs/axe-docs.github.io)
+  # DEPLOY_TARGET_BRANCH: Branch to deploy to (must be master for page to work correctly)
+  #
+  # *** NOTE: the target branch is overwritten on deployment. Use caution to
+  #       avoid inadvertently overwriting something
+  #
+  # DEPLOY_SOURCE_BRANCH: Branch to deploy from
+
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org axeboard, marked secure
+  keep-history: false
+  on:
+    branch: $DEPLOY_SOURCE_BRANCH
+
+  verbose: false
+  local-dir: _site/
+  repo: $DEPLOY_REPO_NAME
+  target_branch: $DEPLOY_TARGET_BRANCH
