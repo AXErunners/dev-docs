@@ -1,0 +1,892 @@
+{% comment %}
+This file is licensed under the MIT License (MIT) available on
+http://opensource.org/licenses/MIT.
+{% endcomment %}
+
+
+<p>Type part of the Name or Type of an RPC to filter the list:</p>
+<input type="text" id="rpcInput" onkeyup="searchRPC()" placeholder="Filter RPCs.." title="Type in an RPC Type or Name">
+<p></p>
+<!--<p>Click the headers to sort the table.</p>-->
+
+<!-- From http://www.tablesgenerator.com/html_tables -->
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-p96l{font-weight:bold;font-size:15px;vertical-align:top}
+.tg .tg-ygzf{font-weight:bold;font-size:15px;text-align:center;vertical-align:top}
+.tg .tg-b7b8{background-color:#f9f9f9;vertical-align:top}
+.tg .tg-dzk6{background-color:#f9f9f9;text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::selection      { background:transparent; }th.tg-sort-header { cursor:pointer; }table th.tg-sort-header:after {  content:'';  float:right;  margin-top:7px;  border-width:0 4px 4px;  border-style:solid;  border-color:#404040 transparent;  visibility:hidden;  }table th.tg-sort-header:hover:after {  visibility:visible;  }table th.tg-sort-desc:after,table th.tg-sort-asc:after,table th.tg-sort-asc:hover:after {  visibility:visible;  opacity:0.4;  }table th.tg-sort-desc:after {  border-bottom:none;  border-width:4px 4px 0;  }@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+</style>
+
+<div class="tg-wrap"><table id="tg-FvABe" class="tg">
+  <tr>
+    <th class="tg-p96l">Type</th>
+    <th class="tg-p96l">Name</th>
+    <th class="tg-ygzf">Axe Support</th>
+    <th class="tg-ygzf">Axe Version</th>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Addressindex</td>
+    <td class="tg-b7b8"><a href="#getaddressbalance">GetAddressBalance</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Addressindex</td>
+    <td class="tg-yw4l"><a href="#getaddressdeltas">GetAddressDeltas</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Addressindex</td>
+    <td class="tg-b7b8"><a href="#getaddressmempool">GetAddressMempool</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Addressindex</td>
+    <td class="tg-yw4l"><a href="#getaddresstxids">GetAddressTxids</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Addressindex</td>
+    <td class="tg-b7b8"><a href="#getaddressutxos">GetAddressUtxos</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getbestblockhash">GetBestBlockHash</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getblock">GetBlock</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getblockchaininfo">GetBlockChainInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getblockcount">GetBlockCount</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getblockhash">GetBlockHash</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getblockhashes">GetBlockHashes</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.1</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getblockheader">GetBlockHeader</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getblockheaders">GetBlockHeaders</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.1</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getchaintips">GetChainTips</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getdifficulty">GetDifficulty</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getmempoolancestors">GetMemPoolAncestors</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getmempooldescendants">GetMemPoolDescendants</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getmempoolentry">GetMemPoolEntry</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getmempoolinfo">GetMemPoolInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#getrawmempool">GetRawMemPool</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#getspentinfo">GetSpentInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.1</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#gettxout">GetTxOut</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#gettxoutproof">GetTxOutProof</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#gettxoutsetinfo">GetTxOutSetInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#preciousblock">PreciousBlock</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#pruneblockchain">PruneBlockChain</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Blockchain</td>
+    <td class="tg-b7b8"><a href="#verifychain">VerifyChain</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Blockchain</td>
+    <td class="tg-yw4l"><a href="#verifytxoutproof">VerifyTxOutProof</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Control</td>
+    <td class="tg-b7b8"><a href="#debug">Debug</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Control</td>
+    <td class="tg-yw4l"><a href="#getinfo">GetInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Control</td>
+    <td class="tg-b7b8"><a href="#help">Help</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Control</td>
+    <td class="tg-yw4l"><a href="#stop">Stop</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#getgovernanceinfo">GetGovernanceInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#getpoolinfo">GetPoolInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#getsuperblockbudget">GetSuperblockBudget</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#gobject">GObject</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#masternode">Masternode</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#masternodebroadcast">MasternodeBroadcast</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#masternodelist">MasternodeList</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#mnsync">MnSync</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#privatesend">PrivateSend</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#sentinelping">SentinelPing</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Axe</td>
+    <td class="tg-b7b8"><a href="#spork-rpc">Spork</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Axe</td>
+    <td class="tg-yw4l"><a href="#voteraw">VoteRaw</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Evolution</td>
+    <td class="tg-b7b8"><a href="#bls">BLS</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Added in 0.13.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Evolution</td>
+    <td class="tg-yw4l"><a href="#protx">ProTx</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Added in 0.13.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Generating</td>
+    <td class="tg-b7b8"><a href="#generate">Generate</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Generating</td>
+    <td class="tg-yw4l"><a href="#generatetoaddress">GenerateToAddress</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Removed</td>
+    <td class="tg-b7b8"><a href="#getgenerate">GetGenerate</a></td>
+    <td class="tg-dzk6">N</td>
+    <td class="tg-dzk6">Removed in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Removed</td>
+    <td class="tg-yw4l"><a href="#setgenerate">SetGenerate</a></td>
+    <td class="tg-baqh">N</td>
+    <td class="tg-baqh">Removed in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Mining</td>
+    <td class="tg-b7b8"><a href="#getblocktemplate">GetBlockTemplate</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Mining</td>
+    <td class="tg-yw4l"><a href="#getmininginfo">GetMiningInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Mining</td>
+    <td class="tg-b7b8"><a href="#getnetworkhashps">GetNetworkHashPS</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Mining</td>
+    <td class="tg-yw4l"><a href="#prioritisetransaction">PrioritiseTransaction</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Mining</td>
+    <td class="tg-b7b8"><a href="#submitblock">SubmitBlock</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#addnode">AddNode</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#clearbanned">ClearBanned</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#disconnectnode">DisconnectNode</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#getaddednodeinfo">GetAddedNodeInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#getconnectioncount">GetConnectionCount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#getnettotals">GetNetTotals</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#getnetworkinfo">GetNetworkInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#getpeerinfo">GetPeerInfo</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#listbanned">ListBanned</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#ping-rpc">Ping</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Network</td>
+    <td class="tg-yw4l"><a href="#setban">SetBan</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Network</td>
+    <td class="tg-b7b8"><a href="#setnetworkactive">SetNetworkActive</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Rawtransactions</td>
+    <td class="tg-yw4l"><a href="#createrawtransaction">CreateRawTransaction</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Rawtransactions</td>
+    <td class="tg-b7b8"><a href="#decoderawtransaction">DecodeRawTransaction</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Rawtransactions</td>
+    <td class="tg-yw4l"><a href="#decodescript">DecodeScript</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Rawtransactions</td>
+    <td class="tg-b7b8"><a href="#fundrawtransaction">FundRawTransaction</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Rawtransactions</td>
+    <td class="tg-yw4l"><a href="#getrawtransaction">GetRawTransaction</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Rawtransactions</td>
+    <td class="tg-b7b8"><a href="#sendrawtransaction">SendRawTransaction</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Rawtransactions</td>
+    <td class="tg-yw4l"><a href="#signrawtransaction">SignRawTransaction</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Removed</td>
+    <td class="tg-b7b8"><a href="#gethashespersec">GetHashesPerSec</a></td>
+    <td class="tg-dzk6">N</td>
+    <td class="tg-dzk6">N/A</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Removed</td>
+    <td class="tg-yw4l"><a href="#getwork">GetWork</a></td>
+    <td class="tg-baqh">N</td>
+    <td class="tg-baqh">N/A</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Util</td>
+    <td class="tg-b7b8"><a href="#createmultisig">CreateMultiSig</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Util</td>
+    <td class="tg-yw4l"><a href="#estimatefee">EstimateFee</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Util</td>
+    <td class="tg-b7b8"><a href="#estimatepriority">EstimatePriority</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Deprecated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Util</td>
+    <td class="tg-yw4l"><a href="#estimatesmartfee">EstimateSmartFee</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Util</td>
+    <td class="tg-b7b8"><a href="#estimatesmartpriority">EstimateSmartPriority</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Deprecated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Util</td>
+    <td class="tg-yw4l"><a href="#getmemoryinfo">GetMemoryInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Util</td>
+    <td class="tg-b7b8"><a href="#setbip69enabled">SetBIP69Enabled</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Util</td>
+    <td class="tg-b7b8"><a href="#validateaddress">ValidateAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Util</td>
+    <td class="tg-yw4l"><a href="#verifymessage">VerifyMessage</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#abandontransaction">AbandonTransaction</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#addmultisigaddress">AddMultiSigAddress</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#addwitnessaddress">AddWitnessAddress</a></td>
+    <td class="tg-dzk6">N</td>
+    <td class="tg-dzk6">N/A</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#backupwallet">BackupWallet</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#bumpfee">BumpFee</a></td>
+    <td class="tg-dzk6">N</td>
+    <td class="tg-dzk6">N/A</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#dumphdinfo">DumpHDInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.2</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#dumpprivkey">DumpPrivKey</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#dumpwallet">DumpWallet</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#encryptwallet">EncryptWallet</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#getaccount">GetAccount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#getaccountaddress">GetAccountAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#getaddressesbyaccount">GetAddressesByAccount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#getbalance">GetBalance</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#getnewaddress">GetNewAddress</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#getrawchangeaddress">GetRawChangeAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#getreceivedbyaccount">GetReceivedByAccount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#getreceivedbyaddress">GetReceivedByAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#gettransaction">GetTransaction</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#getunconfirmedbalance">GetUnconfirmedBalance</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#getwalletinfo">GetWalletInfo</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#importaddress">ImportAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#importelectrumwallet">ImportElectrumWallet</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.1</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#importmulti">ImportMulti</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#importprivkey">ImportPrivKey</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#importprunedfunds">ImportPrunedFunds</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#importpubkey">ImportPubKey</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#importwallet">ImportWallet</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#instantsendtoaddress">InstantSendToAddress</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#keepass">KeePass</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#keypoolrefill">KeyPoolRefill</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#listaccounts">ListAccounts</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#listaddressbalances">ListAddressBalances</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#listaddressgroupings">ListAddressGroupings</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#listlockunspent">ListLockUnspent</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#listreceivedbyaccount">ListReceivedByAccount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#listreceivedbyaddress">ListReceivedByAddress</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#listsinceblock">ListSinceBlock</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#listtransactions">ListTransactions</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#listunspent">ListUnspent</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.12.3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#lockunspent">LockUnspent</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#move">Move</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#removeprunedfunds">RemovePrunedFunds</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#sendfrom">SendFrom</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#sendmany">SendMany</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Updated in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#sendtoaddress">SendToAddress</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#setaccount">SetAccount</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#setprivatesendamount">SetPrivateSendAmount</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">Added in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#setprivatesendrounds">SetPrivateSendRounds</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6">Added in 0.13.0.0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#settxfee">SetTxFee</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#signmessage">SignMessage</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#signmessagewithprivkey">SignMessageWithPrivKey</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh">0.12.3.0+</td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#walletlock">WalletLock</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Wallet</td>
+    <td class="tg-yw4l"><a href="#walletpassphrase">WalletPassphrase</a></td>
+    <td class="tg-baqh">Y</td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Wallet</td>
+    <td class="tg-b7b8"><a href="#walletpassphrasechange">WalletPassphraseChange</a></td>
+    <td class="tg-dzk6">Y</td>
+    <td class="tg-dzk6"></td>
+  </tr>
+</table></div>
+
+<script type="text/javascript" charset="utf-8">var TgTableSort=window.TgTableSort||function(n,t){"use strict";function r(n,t){for(var e=[],o=n.childNodes,i=0;i<o.length;++i){var u=o[i];if("."==t.substring(0,1)){var a=t.substring(1);f(u,a)&&e.push(u)}else u.nodeName.toLowerCase()==t&&e.push(u);var c=r(u,t);e=e.concat(c)}return e}function e(n,t){var e=[],o=r(n,"tr");return o.forEach(function(n){var o=r(n,"td");t>=0&&t<o.length&&e.push(o[t])}),e}function o(n){return n.textContent||n.innerText||""}function i(n){return n.innerHTML||""}function u(n,t){var r=e(n,t);return r.map(o)}function a(n,t){var r=e(n,t);return r.map(i)}function c(n){var t=n.className||"";return t.match(/\S+/g)||[]}function f(n,t){return-1!=c(n).indexOf(t)}function s(n,t){f(n,t)||(n.className+=" "+t)}function d(n,t){if(f(n,t)){var r=c(n),e=r.indexOf(t);r.splice(e,1),n.className=r.join(" ")}}function v(n){d(n,L),d(n,E)}function l(n,t,e){r(n,"."+E).map(v),r(n,"."+L).map(v),e==T?s(t,E):s(t,L)}function g(n){return function(t,r){var e=n*t.str.localeCompare(r.str);return 0==e&&(e=t.index-r.index),e}}function h(n){return function(t,r){var e=+t.str,o=+r.str;return e==o?t.index-r.index:n*(e-o)}}function m(n,t,r){var e=u(n,t),o=e.map(function(n,t){return{str:n,index:t}}),i=e&&-1==e.map(isNaN).indexOf(!0),a=i?h(r):g(r);return o.sort(a),o.map(function(n){return n.index})}function p(n,t,r,o){for(var i=f(o,E)?N:T,u=m(n,r,i),c=0;t>c;++c){var s=e(n,c),d=a(n,c);s.forEach(function(n,t){n.innerHTML=d[u[t]]})}l(n,o,i)}function x(n,t){var r=t.length;t.forEach(function(t,e){t.addEventListener("click",function(){p(n,r,e,t)}),s(t,"tg-sort-header")})}var T=1,N=-1,E="tg-sort-asc",L="tg-sort-desc";return function(t){var e=n.getElementById(t),o=r(e,"tr"),i=o.length>0?r(o[0],"td"):[];0==i.length&&(i=r(o[0],"th"));for(var u=1;u<o.length;++u){var a=r(o[u],"td");if(a.length!=i.length)return}x(e,i)}}(document);document.addEventListener("DOMContentLoaded",function(n){TgTableSort("tg-FvABe")});
+</script>
+
+<script>
+function searchRPC() {
+  var input, filter, table, tr, td1, td2, i;
+  input = document.getElementById("rpcInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tg-FvABe");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td1 = tr[i].getElementsByTagName("td")[0];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    if (td1 || td2) {
+      if ((td1.innerHTML.toUpperCase().indexOf(filter) > -1) || (td2.innerHTML.toUpperCase().indexOf(filter) > -1)) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>

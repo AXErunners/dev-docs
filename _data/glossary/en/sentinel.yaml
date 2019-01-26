@@ -1,0 +1,27 @@
+---
+# This file is licensed under the MIT License (MIT) available on
+# http://opensource.org/licenses/MIT.
+
+required:
+                                           #-------------40 characters-------------#
+    title_max_40_characters_no_formatting: Sentinel
+
+    summary_max_255_characters_no_formatting: >
+        An autonomous agent for persisting, processing and automating Axe
+        governance objects and tasks, and for expanded functions in Axe
+        Evolution.
+
+    synonyms_shown_in_glossary_capitalize_first_letter:
+        - Sentinel
+
+optional:
+    synonyms_and_pluralizations_not_shown_in_glossary:
+
+    not_to_be_confused_with_capitalize_first_letter:
+
+    links_html_or_markdown_style_capitalize_first_letter:
+        - "[Sentinel](/en/developer-guide#sentinel) --- Developer Guide"
+        - "[Sentinel](https://axerunners.atlassian.net/wiki/spaces/DOC/pages/103922706/Sentinel) --- Axe Wiki"
+
+
+---

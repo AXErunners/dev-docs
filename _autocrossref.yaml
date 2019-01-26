@@ -1,0 +1,549 @@
+---
+# This file is licensed under the MIT License (MIT) available on
+# http://opensource.org/licenses/MIT.
+
+## List of words to match with references in _includes/references.md
+## in developer documentation, used by autocrossref.rb plugin.
+## "pattern to match in file" => "reference to give it"
+#
+## To prevent a ref for term, use: "term: DO NOT AUTOCROSSREF"
+
+'`addr` message': addr message
+'`addr` messages': addr message
+'`alert` message': alert message
+'`alert` messages': alert message
+'`amount`': DO NOT AUTOCROSSREF
+bitcoin QR code: URI QR code
+bitcoin QR codes: URI QR code
+'`bitcoin:` URI': bitcoin uri
+'`bitcoin:` URIs': bitcoin uri
+bitcoinj:
+'`block` message': block message
+'`block` messages': block message
+'`blocktxn` message': blocktxn message
+'`blocktxn` messages': blocktxn message
+'CbTx': coinbase special tx
+certificate chain:
+'`cmpctblock` message': cmpctblock message
+'`cmpctblock` messages': cmpctblock message
+DER:
+DER format: der
+DER-formatted: der
+'`dsa` message': dsa message
+'`dsa` messages': dsa message
+'`dsc` message': dsc message
+'`dsc` messages': dsc message
+'`dsf` message': dsf message
+'`dsf` messages': dsf message
+'`dsi` message': dsi message
+'`dsi` messages': dsi message
+'`dsq` message': dsq message
+'`dsq` messages': dsq message
+'`dseg` message': dseg message
+'`dseg` messages': dseg message
+'`dss` message': dss message
+'`dss` messages': dss message
+'`dssu` message': dssu message
+'`dssu` messages': dssu message
+'`dstx` message': dstx message
+'`dstx` messages': dstx message
+DNS address: DO NOT AUTOCROSSREF
+ECDSA:
+epoch time: unix epoch time
+'`expires`': pp expires
+#'`feefilter` message': feefilter message
+#'`feefilter` messages': feefilter message
+fiat:
+'`filteradd` message': filteradd message
+'`filteradd` messages': filteradd message
+'`filterclear` message': filterclear message
+'`filterclear` messages': filterclear message
+'`filterload` message': filterload message
+'`filterload` messages': filterload message
+'`getblocks` message': getblocks message
+'`getblocks` messages': getblocks message
+'`getblocktxn` message': getblocktxn message
+'`getblocktxn` messages': getblocktxn message
+'`getdata` message': getdata message
+'`getdata` messages': getdata message
+'`getheaders` message': getheaders message
+'`getheaders` messages': getheaders message
+'`getaddr` message': getaddr message
+'`getaddr` messages': getaddr message
+'`getmnlistd` message': getmnlistd message
+'`getmnlistd` messages': getmnlistd message
+'`getsporks` message': getsporks message
+'`getsporks` messages': getsporks message
+'`govobj` message': govobj message
+'`govobj` messages': govobj message
+'`govobjvote` message': govobjvote message
+'`govobjvote` messages': govobjvote message
+'`govsync` message': govsync message
+'`govsync` messages': govsync message
+'`headers` message': headers message
+'`headers` messages': headers message
+intermediate certificate:
+intermediate certificates: intermediate certificate
+'`inv` message': inv message
+'`inv` messages': inv message
+'`ix` message': ix message
+'`ix` messages': ix message
+IP address: DO NOT AUTOCROSSREF
+IP addresses: DO NOT AUTOCROSSREF
+IPv4 address: DO NOT AUTOCROSSREF
+IPv4 addresses: DO NOT AUTOCROSSREF
+IPv6 address: DO NOT AUTOCROSSREF
+IPv6 addresses: DO NOT AUTOCROSSREF
+key index:
+key pair:
+'`label`': DO NOT AUTOCROSSREF
+leaf certificate:
+long-term fork:
+man in the middle: man-in-the-middle
+man-in-the-middle:
+'`memo`': pp memo
+'`mempool` message': mempool message
+'`mempool` messages': mempool message
+'`message`': message
+message payload:
+'`merchant_data`': pp merchant data
+'`merkleblock` message': merkleblock message
+'`merkleblock` messages': merkleblock message
+merge:
+Merge avoidance: DO NOT AUTOCROSSREF
+micropayment channel:
+micropayment channels: micropayment channel
+'`mnb` message': mnb message
+'`mnb` messages': mnb message
+'`mnget` message': mnget message
+'`mnget` messages': mnget message
+'`mnlistdiff` message': mnlistdiff message
+'`mnlistdiff` messages': mnlistdiff message
+'`mnp` message': mnp message
+'`mnp` messages': mnp message
+'`mnv` message': mnv message
+'`mnv` messages': mnv message
+'`mnw` message': mnw message
+'`mnw` messages': mnw message
+'`MSG_BLOCK`': msg_block
+'`MSG_FILTERED_BLOCK`': msg_filtered_block
+'`MSG_TX`': msg_tx
+multisig p2sh: p2sh multisig
+network:
+'`notfound` message': notfound message
+'`notfound` messages': notfound message
+'number (bitcoins)': proper money handling
+'`op_checkmultisig`': op_checkmultisig
+'`op_checksig`': op_checksig
+'`op_dup`': op_dup
+'`op_equal`': op_equal
+'`op_equalverify`': op_equalverify
+'`op_hash160`': op_hash160
+'`op_return`': op_return
+'`op_verify`': op_verify
+output index:
+PaymentDetails:
+PaymentRequest:
+PaymentRequests: paymentrequest
+peer-to-peer: network
+peer-to-peer network: network
+'`ping` message': ping message
+'`ping` messages': ping message
+pki:
+'`pki_type`': pp pki type
+'`point()`': point function
+'`pong` message': pong message
+'`pong` messages': pong message
+previous block header hash:
+'ProRegTx': proregtx special tx
+'ProUpRegTx': proupregtx special tx
+'ProUpRevTx': prouprevtx special tx
+'ProUpServTx': proupservtx special tx
+protocol buffer: protobuf
+protocol buffers: protobuf
+protocol version 106: section protocol versions
+protocol version 209: section protocol versions
+protocol version 311: section protocol versions
+protocol version 31402: section protocol versions
+protocol version 31800: section protocol versions
+protocol version 60000: section protocol versions
+protocol version 60001: section protocol versions
+protocol version 60002: section protocol versions
+protocol version 70001: section protocol versions
+protocol version 70002: section protocol versions
+protocol version 70012: section protocol versions
+protocol version 70013: section protocol versions
+protocol version 70014: section protocol versions
+public key infrastructure: pki
+'QcTx': quorum commitment special tx
+'`qfcommit` message': qfcommit message
+'`qfcommit` messages': qfcommit message
+'`r`': r
+receipt: DO NOT AUTOCROSSREF
+recurrent rebilling:
+refund: DO NOT AUTOCROSSREF
+refunds: DO NOT AUTOCROSSREF
+'`reject` message': reject message
+'`reject` messages': reject message
+root certificate:
+RPC:
+RPCs: rpc
+'`script`': DO NOT AUTOCROSSREF
+secp256k1:
+'`sendcmpct` message': sendcmpct message
+'`sendcmpct` messages': sendcmpct message
+'`spork` message': spork message
+'`spork` messages': spork message
+'`ssc` message': ssc message
+'`ssc` messages': ssc message
+standard block relay:
+transaction object format:
+transaction version number:
+'`tx` message': tx message
+'`tx` messages': tx message
+'`txlvote` message': txlvote message
+'`txlvote` messages': txlvote message
+unencrypted wallet:
+unix epoch time:
+unix time: unix epoch time
+unique address: unique addresses
+unique addresses:
+unlocked wallet:
+unsolicited block push:
+'`verack` message': verack message
+'`verack` messages': verack message
+verified payments:
+version 2 blocks: v2 block
+'`version` message': version message
+'`version` messages': version message
+waching-only: watch-only
+wallet support:
+wallet support disabled: wallet support
+wallet support enabled: wallet support
+x.509: x509
+X509Certificates:
+
+## BIPs in numerical order; don't use padding zeros (e.g. BIP70 not BIP0070)
+BIP9:
+BIP14:
+BIP16:
+BIP21:
+BIP30:
+BIP31:
+BIP32:
+BIP34:
+BIP37:
+BIP39:
+BIP50:
+BIP61:
+BIP62:
+BIP65:
+BIP66:
+BIP68:
+BIP70:
+BIP71:
+BIP72:
+BIP90:
+BIP111:
+BIP112:
+BIP113:
+BIP125:
+BIP130:
+BIP133:
+BIP141:
+BIP147:
+BIP151:
+BIP152:
+
+## CVEs
+CVE-2012-2459:
+
+## DIPs in numerical order; don't use padding zeros (e.g. DIP1 not DIP0001)
+DIP1:
+
+## RPCs
+'`abandontransaction`': rpc abandontransaction
+'`abandontransaction` RPC': rpc abandontransaction
+'`addmultisigaddress`': rpc addmultisigaddress
+'`addmultisigaddress` RPC': rpc addmultisigaddress
+'`addnode`': rpc addnode
+'`addnode` RPC': rpc addnode
+'`addwitnessaddress`': rpc addwitnessaddress
+'`addwitnessaddress` RPC': rpc addwitnessaddress
+'`backupwallet`': rpc backupwallet
+'`backupwallet` RPC': rpc backupwallet
+'`bls`': rpc bls
+'`bls` RPC': rpc bls
+'`bumpfee`': rpc bumpfee
+'`bumpfee` RPC': rpc bumpfee
+'`clearbanned`': rpc clearbanned
+'`clearbanned` RPC': rpc clearbanned
+'`createmultisig`': rpc createmultisig
+'`createmultisig` RPC': rpc createmultisig
+'`createrawtransaction`': rpc createrawtransaction
+'`createrawtransaction` RPC': rpc createrawtransaction
+'`debug`': rpc debug
+'`debug` RPC': rpc debug
+'`decoderawtransaction`': rpc decoderawtransaction
+'`decoderawtransaction` RPC': rpc decoderawtransaction
+'`decodescript`': rpc decodescript
+'`decodescript` RPC': rpc decodescript
+'`disconnectnode`': rpc disconnectnode
+'`disconnectnode` RPC': rpc disconnectnode
+'`dumphdinfo`': rpc dumphdinfo
+'`dumphdinfo` RPC': rpc dumphdinfo
+'`dumpprivkey`': rpc dumpprivkey
+'`dumpprivkey` RPC': rpc dumpprivkey
+'`dumpwallet`': rpc dumpwallet
+'`dumpwallet` RPC': rpc dumpwallet
+'`encryptwallet`': rpc encryptwallet
+'`encryptwallet` RPC': rpc encryptwallet
+'`estimatefee`': rpc estimatefee
+'`estimatefee` RPC': rpc estimatefee
+'`estimatepriority`': rpc estimatepriority
+'`estimatepriority` RPC': rpc estimatepriority
+'`estimatesmartfee`': rpc estimatesmartfee
+'`estimatesmartfee` RPC': rpc estimatesmartfee
+'`estimatesmartpriority`': rpc estimatesmartpriority
+'`estimatesmartpriority` RPC': rpc estimatesmartpriority
+'`fundrawtransaction`': rpc fundrawtransaction
+'`fundrawtransaction` RPC': rpc fundrawtransaction
+'`generate`': rpc generate
+'`generate` RPC': rpc generate
+'`generatetoaddress`': rpc generatetoaddress
+'`generatetoaddress` RPC': rpc generatetoaddress
+'`getaccount`': rpc getaccount
+'`getaccount` RPC': rpc getaccount
+'`getaccountaddress`': rpc getaccountaddress
+'`getaccountaddress` RPC': rpc getaccountaddress
+'`getaddednodeinfo`': rpc getaddednodeinfo
+'`getaddednodeinfo` RPC': rpc getaddednodeinfo
+'`getaddressbalance`': rpc getaddressbalance
+'`getaddressbalance` RPC': rpc getaddressbalance
+'`getaddressdeltas`': rpc getaddressdeltas
+'`getaddressdeltas` RPC': rpc getaddressdeltas
+'`getaddressesbyaccount`': rpc getaddressesbyaccount
+'`getaddressesbyaccount` RPC': rpc getaddressesbyaccount
+'`getaddressmempool`': rpc getaddressmempool
+'`getaddressmempool` RPC': rpc getaddressmempool
+'`getaddresstxids`': rpc getaddresstxids
+'`getaddresstxids` RPC': rpc getaddresstxids
+'`getaddressutxos`': rpc getaddressutxos
+'`getaddressutxos` RPC': rpc getaddressutxos
+'`getbalance`': rpc getbalance
+'`getbalance` RPC': rpc getbalance
+'`getbestblockhash`': rpc getbestblockhash
+'`getbestblockhash` RPC': rpc getbestblockhash
+'`getblock`': rpc getblock
+'`getblock` RPC': rpc getblock
+'`getblockchaininfo`': rpc getblockchaininfo
+'`getblockchaininfo` RPC': rpc getblockchaininfo
+'`getblockcount`': rpc getblockcount
+'`getblockcount` RPC': rpc getblockcount
+'`getblockhash`': rpc getblockhash
+'`getblockhash` RPC': rpc getblockhash
+'`getblockhashes`': rpc getblockhashes
+'`getblockhashes` RPC': rpc getblockhashes
+'`getblockheader`': rpc getblockheader
+'`getblockheader` RPC': rpc getblockheader
+'`getblockheaders`': rpc getblockheaders
+'`getblockheaders` RPC': rpc getblockheaders
+'`getblocktemplate`': rpc getblocktemplate
+'`getblocktemplate` RPC': rpc getblocktemplate
+'`getchaintips`': rpc getchaintips
+'`getchaintips` RPC': rpc getchaintips
+'`getconnectioncount`': rpc getconnectioncount
+'`getconnectioncount` RPC': rpc getconnectioncount
+'`getdifficulty`': rpc getdifficulty
+'`getdifficulty` RPC': rpc getdifficulty
+'`getgenerate`': rpc getgenerate
+'`getgenerate` RPC': rpc getgenerate
+'`getgovernanceinfo`': rpc getgovernanceinfo
+'`getgovernanceinfo` RPC': rpc getgovernanceinfo
+'`gethashespersec`': rpc gethashespersec
+'`gethashespersec` RPC': rpc gethashespersec
+'`getinfo`': rpc getinfo
+'`getinfo` RPC': rpc getinfo
+'`getmemoryinfo`': rpc getmemoryinfo
+'`getmemoryinfo` RPC': rpc getmemoryinfo
+'`getmempoolancestors`': rpc getmempoolancestors
+'`getmempoolancestors` RPC': rpc getmempoolancestors
+'`getmempooldescendants`': rpc getmempooldescendants
+'`getmempooldescendants` RPC': rpc getmempooldescendants
+'`getmempoolentry`': rpc getmempoolentry
+'`getmempoolentry` RPC': rpc getmempoolentry
+'`getmempoolinfo`': rpc getmempoolinfo
+'`getmempoolinfo` RPC': rpc getmempoolinfo
+'`getmininginfo`': rpc getmininginfo
+'`getmininginfo` RPC': rpc getmininginfo
+'`getnettotals`': rpc getnettotals
+'`getnettotals` RPC': rpc getnettotals
+'`getnetworkhashps`': rpc getnetworkhashps
+'`getnetworkhashps` RPC': rpc getnetworkhashps
+'`getnetworkinfo`': rpc getnetworkinfo
+'`getnetworkinfo` RPC': rpc getnetworkinfo
+'`getnewaddress`': rpc getnewaddress
+'`getnewaddress` RPC': rpc getnewaddress
+'`getpeerinfo`': rpc getpeerinfo
+'`getpeerinfo` RPC': rpc getpeerinfo
+'`getpoolinfo`': rpc getpoolinfo
+'`getpoolinfo` RPC': rpc getpoolinfo
+'`getrawchangeaddress`': rpc getrawchangeaddress
+'`getrawchangeaddress` RPC': rpc getrawchangeaddress
+'`getrawmempool`': rpc getrawmempool
+'`getrawmempool` RPC': rpc getrawmempool
+'`getrawtransaction`': rpc getrawtransaction
+'`getrawtransaction` RPC': rpc getrawtransaction
+'`getreceivedbyaccount`': rpc getreceivedbyaccount
+'`getreceivedbyaccount` RPC': rpc getreceivedbyaccount
+'`getreceivedbyaddress`': rpc getreceivedbyaddress
+'`getreceivedbyaddress` RPC': rpc getreceivedbyaddress
+'`getspentinfo`': rpc getspentinfo
+'`getspentinfo` RPC': rpc getspentinfo
+'`getsuperblockbudget`': rpc getsuperblockbudget
+'`getsuperblockbudget` RPC': rpc getsuperblockbudget
+'`gettransaction`': rpc gettransaction
+'`gettransaction` RPC': rpc gettransaction
+'`gettxout`': rpc gettxout
+'`gettxout` RPC': rpc gettxout
+'`gettxoutproof`': rpc gettxoutproof
+'`gettxoutproof` RPC': rpc gettxoutproof
+'`gettxoutsetinfo`': rpc gettxoutsetinfo
+'`gettxoutsetinfo` RPC': rpc gettxoutsetinfo
+'`getunconfirmedbalance`': rpc getunconfirmedbalance
+'`getunconfirmedbalance` RPC': rpc getunconfirmedbalance
+'`getwalletinfo`': rpc getwalletinfo
+'`getwalletinfo` RPC': rpc getwalletinfo
+'`getwork`': rpc getwork
+'`getwork` RPC': rpc getwork
+'`gobject`': rpc gobject
+'`gobject` RPC': rpc gobject
+'`help`': rpc help
+'`help` RPC': rpc help
+'`importaddress`': rpc importaddress
+'`importaddress` RPC': rpc importaddress
+'`importelectrumwallet`': rpc importelectrumwallet
+'`importelectrumwallet` RPC': rpc importelectrumwallet
+'`importmulti`': rpc importmulti
+'`importmulti` RPC': rpc importmulti
+'`importprivkey`': rpc importprivkey
+'`importprivkey` RPC': rpc importprivkey
+'`importprunedfunds`': rpc importprunedfunds
+'`importprunedfunds` RPC': rpc importprunedfunds
+'`importpubkey`': rpc importpubkey
+'`importpubkey` RPC': rpc importpubkey
+'`importwallet`': rpc importwallet
+'`importwallet` RPC': rpc importwallet
+'`instantsendtoaddress`': rpc instantsendtoaddress
+'`instantsendtoaddress` RPC': rpc instantsendtoaddress
+'`keepass`': rpc keepass
+'`keepass` RPC': rpc keepass
+'`keypoolrefill`': rpc keypoolrefill
+'`keypoolrefill` RPC': rpc keypoolrefill
+'`listaccounts`': rpc listaccounts
+'`listaccounts` RPC': rpc listaccounts
+'`listaddressbalances`': rpc listaddressbalances
+'`listaddressbalances` RPC': rpc listaddressbalances
+'`listaddressgroupings`': rpc listaddressgroupings
+'`listaddressgroupings` RPC': rpc listaddressgroupings
+'`listbanned`': rpc listbanned
+'`listbanned` RPC': rpc listbanned
+'`listlockunspent`': rpc listlockunspent
+'`listlockunspent` RPC': rpc listlockunspent
+'`listreceivedbyaccount`': rpc listreceivedbyaccount
+'`listreceivedbyaccount` RPC': rpc listreceivedbyaccount
+'`listreceivedbyaddress`': rpc listreceivedbyaddress
+'`listreceivedbyaddress` RPC': rpc listreceivedbyaddress
+'`listsinceblock`': rpc listsinceblock
+'`listsinceblock` RPC': rpc listsinceblock
+'`listtransactions`': rpc listtransactions
+'`listtransactions` RPC': rpc listtransactions
+'`listunspent`': rpc listunspent
+'`listunspent` RPC': rpc listunspent
+'`lockunspent`': rpc lockunspent
+'`lockunspent` RPC': rpc lockunspent
+'`masternode`': rpc masternode
+'`masternode` RPC': rpc masternode
+'`masternodebroadcast`': rpc masternodebroadcast
+'`masternodebroadcast` RPC': rpc masternodebroadcast
+'`masternodelist`': rpc masternodelist
+'`masternodelist` RPC': rpc masternodelist
+'`mnsync`': rpc mnsync
+'`mnsync` RPC': rpc mnsync
+'`move`': rpc move
+'`move` RPC': rpc move
+'`ping`': rpc ping
+'`ping` RPC': rpc ping
+'`protx`': rpc protx
+'`protx` RPC': rpc protx
+'`preciousblock`': rpc preciousblock
+'`preciousblock` RPC': rpc preciousblock
+'`prioritisetransaction`': rpc prioritisetransaction
+'`prioritisetransaction` RPC': rpc prioritisetransaction
+'`privatesend`': rpc privatesend
+'`privatesend` RPC': rpc privatesend
+'`pruneblockchain`': rpc pruneblockchain
+'`pruneblockchain` RPC': rpc pruneblockchain
+'`removeprunedfunds`': rpc removeprunedfunds
+'`removeprunedfunds` RPC': rpc removeprunedfunds
+'`sendfrom`': rpc sendfrom
+'`sendfrom` RPC': rpc sendfrom
+'`sendheaders`': sendheaders message
+'`sendheaders` message': sendheaders message
+'`sendheaders` messages': sendheaders message
+'`sendmany`': rpc sendmany
+'`sendmany` RPC': rpc sendmany
+'`sendrawtransaction`': rpc sendrawtransaction
+'`sendrawtransaction` RPC': rpc sendrawtransaction
+'`sendtoaddress`': rpc sendtoaddress
+'`sendtoaddress` RPC': rpc sendtoaddress
+'`setaccount`': rpc setaccount
+'`setaccount` RPC': rpc setaccount
+'`setbip69enabled`': rpc setbip69enabled
+'`setbip69enabled` RPC': rpc setbip69enabled
+'`setban`': rpc setban
+'`setban` RPC': rpc setban
+'`setgenerate`': rpc setgenerate
+'`setgenerate` RPC': rpc setgenerate
+'`setnetworkactive`': rpc setnetworkactive
+'`setnetworkactive` RPC': rpc setnetworkactive
+'`setprivatesendamount`': rpc setprivatesendamount
+'`setprivatesendamount` RPC': rpc setprivatesendamount
+'`setprivatesendrounds`': rpc setprivatesendrounds
+'`setprivatesendrounds` RPC': rpc setprivatesendrounds
+'`settxfee`': rpc settxfee
+'`settxfee` RPC': rpc settxfee
+'`signmessage`': rpc signmessage
+'`signmessage` RPC': rpc signmessage
+'`signmessagewithprivkey`': rpc signmessagewithprivkey
+'`signmessagewithprivkey` RPC': rpc signmessagewithprivkey
+'`signrawtransaction`': rpc signrawtransaction
+'`signrawtransaction` RPC': rpc signrawtransaction
+'`sentinelping`': rpc sentinelping
+'`sentinelping` RPC': rpc sentinelping
+'`spork`': rpc spork
+'`spork` RPC': rpc spork
+'`stop`': rpc stop
+'`stop` RPC': rpc stop
+'`submitblock`': rpc submitblock
+'`submitblock` RPC': rpc submitblock
+'`validateaddress`': rpc validateaddress
+'`validateaddress` RPC': rpc validateaddress
+'`verifychain`': rpc verifychain
+'`verifychain` RPC': rpc verifychain
+'`verifymessage`': rpc verifymessage
+'`verifymessage` RPC': rpc verifymessage
+'`verifytxoutproof`': rpc verifytxoutproof
+'`verifytxoutproof` RPC': rpc verifytxoutproof
+'`voteraw`': rpc voteraw
+'`voteraw` RPC': rpc voteraw
+'`walletlock`': rpc walletlock
+'`walletlock` RPC': rpc walletlock
+'`walletpassphrase`': rpc walletpassphrase
+'`walletpassphrase` RPC': rpc walletpassphrase
+'`walletpassphrasechange`': rpc walletpassphrasechange
+'`walletpassphrasechange` RPC': rpc walletpassphrasechange
+
+## Versions of Bitcoin Core (linked to Bitcoin.org release notes)
+#Bitcoin Core 0.14.2:
+#Bitcoin Core master:

@@ -1,0 +1,24 @@
+scripts/*.md
+_site/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.bundle
+vendor
+_cache
+.jekyll-metadata
+.sass-cache/
+_ignore/*
+
+# To prevent adding doxygen files since they can 
+# be easily generated from Axe Core source
+en/doxygen/
+
+# To prevent accidental push of translations from
+# Transifex.
+.tx/translations/

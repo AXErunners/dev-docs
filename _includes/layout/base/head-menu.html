@@ -1,0 +1,32 @@
+{% comment %}
+This file is licensed under the MIT License (MIT) available on
+http://opensource.org/licenses/MIT.
+{% endcomment %}
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li{% if page.id == 'axe-for-developers' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate axe-for-developers url %}">{% translate menu-axe-for-developers layout %}</a></li>
+  <!--{% if page.lang == 'en' %}<li{% if page.id == 'developer-documentation' %} class="active"{% endif %}><a href="/en/developer-documentation">Documentation</a></li>{% endif %}-->
+
+  <li><a>{% translate menu-documentation layout %}</a>
+    <ul>
+      {% if page.lang == 'en' %}<li{% if page.id == 'developer-guide' %} class="active"{% endif %}><a href="/en/developer-guide">Guide</a></li>{% endif %}
+      {% if page.lang == 'en' %}<li{% if page.id == 'developer-reference' %} class="active"{% endif %}><a href="/en/developer-reference">Reference</a></li>{% endif %}
+      {% if page.lang == 'en' %}<li{% if page.id == 'developer-examples' %} class="active"{% endif %}><a href="/en/developer-examples">Examples</a></li>{% endif %}
+      {% if page.lang == 'en' %}<li{% if page.id == 'developer-glossary' %} class="active"{% endif %}><a href="/en/developer-glossary">Glossary</a></li>{% endif %}
+      {% if page.lang == 'en' %}<li{% if page.id == 'developer-source-code' %} class="active"{% endif %}><a href="/en/doxygen/html/index.html">Source Code</a></li>{% endif %}
+
+      <!--
+      <li{% if page.id == 'getting-started' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate getting-started url %}">{% translate menu-getting-started layout %}</a></li>
+      <li{% if page.id == 'how-it-works' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate how-it-works url %}">{% translate menu-how-it-works layout %}</a></li>
+      <li{% if page.id == 'you-need-to-know' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate you-need-to-know url %}">{% translate menu-you-need-to-know layout %}</a></li>
+    -->
+    </ul>
+  </li>
+  <li><a>{% translate menu-resources layout %}</a>
+    <ul>
+      <li{% if page.id == 'community' %} class="active"{% endif %}><a rel="noopener noreferrer" target="_blank" href="https://www.axe.org/community/">{% translate menu-community layout %}</a></li>
+      <li{% if page.id == 'vocabulary' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate vocabulary url %}">{% translate menu-vocabulary layout %}</a></li>
+    </ul>
+  </li>
+  <!-- <li{% if page.id == 'innovation' %} class="active"{% endif %}><a href="/{{ page.lang }}/{% translate innovation url %}">{% translate menu-innovation layout %}</a></li> -->
+</ul>
