@@ -1,6 +1,6 @@
 # Welcome to AXE dev-docs Codebase
 
-Current Build Status: ![Build Status](https://travis-ci.com/axe-docs/axe-docs.svg?branch=master)
+Current Build Status: ![Build Status](https://api.travis-ci.com/AXErunners/dev-docs.svg?branch=master)
 
 Live site: [axerunner.github.io](https://axerunner.github.io)
 
