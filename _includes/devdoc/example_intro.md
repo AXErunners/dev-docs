@@ -65,7 +65,7 @@ regression test mode (regtest), or a develper network (devnet) described below.
 
 Questions about Axe use are best sent to the [Axe forum][forum
 tech support] and [Discord channels][Discord channels]. Errors or suggestions related to
-documentation on axe-docs.github.io can be [submitted as an issue][docs issue].
+documentation on dev-docs can be [submitted as an issue][docs issue].
 
 In the following documentation, some strings have been shortened or wrapped: "[...]"
 indicates extra data was removed, and lines ending in a single backslash "\\"

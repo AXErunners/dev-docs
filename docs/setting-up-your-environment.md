@@ -2,7 +2,7 @@
 
 #### Preview Small Text Changes
 
-Simple text changes can be previewed live on axe-docs.github.io. You only need to click
+Simple text changes can be previewed live on dev-docs. You only need to click
 anywhere on the page and hold your mouse button for one second. You'll then be
 able to edit the page just like a document. Changes will be lost as soon as the
 page is refreshed.
@@ -21,7 +21,7 @@ site an unlimited number of times with no extra work.
 
 #### Source Code Documentation
 
-The https://axe-docs.github.io site includes Doxygen generated documentation
+The https://axerunner.github.io site includes Doxygen generated documentation
 for the [Axe Core](https://github.com/axerunners/axe/) source code. To
 generate it, copy the files from `doxygen/` into the Axe Core `doc/` folder
 and run `doxygen doc/Doxyfile-axedocs`. Then copy the output (Axe Core's
@@ -175,13 +175,13 @@ For a list of languages, look in the `_translations` directory.
 
 You can publish your previews online to any static hosting service.
 [GitHub pages](https://pages.github.com/) is a free service available to
-all GitHub users that works with axe-docs.github.io's site hierarchy.
+all GitHub users that works with dev-docs's site hierarchy.
 
 Before building a preview site, it is recommended that you set the
 environmental variable `BITCOINORG_BUILD_TYPE` to "preview".  This will
 enable some content that would otherwise be hidden and also create a
 robots.txt file that will help prevent the site from being indexed by
-search engines and mistaken for the actual axe-docs.github.io website.
+search engines and mistaken for the actual dev-docs website.
 
 In the bash shell, you can do this by running the following command line
 before building you preview:

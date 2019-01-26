@@ -50,13 +50,13 @@ module Jekyll
             #Don't add a page if their url is not translated
             next if locs[lang]['url'][id].nil? or locs[lang]['url'][id] == ''
             sitemap.puts '<url>'
-            sitemap.puts '  <loc>https://axe-docs.github.io/'+lang+'/'+CGI::escape(locs[lang]['url'][id])+'</loc>'
+            sitemap.puts '  <loc>https://axerunner.github.io/'+lang+'/'+CGI::escape(locs[lang]['url'][id])+'</loc>'
             locs.each do |altlang,value|
               next if locs[altlang]['url'][id].nil? or locs[altlang]['url'][id] == '' or altlang == lang
               sitemap.puts '  <xhtml:link'
               sitemap.puts '    rel="alternate"'
               sitemap.puts '    hreflang="'+altlang+'"'
-              sitemap.puts '    href="https://axe-docs.github.io/'+altlang+'/'+CGI::escape(locs[altlang]['url'][id])+'" />'
+              sitemap.puts '    href="https://axerunner.github.io/'+altlang+'/'+CGI::escape(locs[altlang]['url'][id])+'" />'
             end
             sitemap.puts '</url>'
           end
@@ -68,7 +68,7 @@ module Jekyll
           data = File.read(file)
           next if !data.index('google-site-verification:').nil?
           sitemap.puts '<url>'
-          sitemap.puts '  <loc>https://axe-docs.github.io/'+file.gsub('.html','').gsub('.md','')+'</loc>'
+          sitemap.puts '  <loc>https://axerunner.github.io/'+file.gsub('.html','').gsub('.md','')+'</loc>'
           sitemap.puts '</url>'
         end
         #Close sitemap

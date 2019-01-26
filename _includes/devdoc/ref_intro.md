@@ -16,7 +16,7 @@ Core, either from [source][core git] or from a [pre-compiled executable][core ex
 Questions about Axe development are best asked in one of the
 [Axe development communities][dev communities].
 Errors or suggestions related to
-documentation on [axe-docs.github.io](https://axe-docs.github.io) can be
+documentation on [dev-docs](https://axerunner.github.io) can be
 [submitted as an issue][docs issue].
 
 In the following documentation, some strings have been shortened or wrapped: "[...]"
@@ -33,7 +33,7 @@ definition of the term will be displayed in a tooltip.
 
 {% autocrossref %}
 
-The axe-docs.github.io Developer Documentation describes how Axe works to
+The axerunner.github.io Developer Documentation describes how Axe works to
 help educate new Axe developers, but it is not a specification---and
 it never will be.
 

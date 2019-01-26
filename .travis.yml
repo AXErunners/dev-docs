@@ -40,7 +40,7 @@ deploy:
   # Set these environment variables in travis-ci.org settings for the repo:
   #
   # GITHUB_TOKEN: token that allows Travis to deploy to GitHub (mark secure)
-  # DEPLOY_REPO_NAME: GitHub repo to deploy to (i.e axe-docs/axe-docs.github.io)
+  # DEPLOY_REPO_NAME: GitHub repo to deploy to (i.e dev-docs/dev-docs.github.io)
   # DEPLOY_TARGET_BRANCH: Branch to deploy to (must be master for page to work correctly)
   #
   # *** NOTE: the target branch is overwritten on deployment. Use caution to

@@ -1,8 +1,8 @@
-# Welcome to Axe-docs.github.io.org's Codebase
+# Welcome to AXE dev-docs Codebase
 
 Current Build Status: ![Build Status](https://travis-ci.com/axe-docs/axe-docs.svg?branch=master)
 
-Live site: [dev-docs.axecore.net](https://dev-docs.axecore.net)
+Live site: [axerunner.github.io](https://axerunner.github.io)
 
 Report problems or help improve the site by opening a [new issue](https://github.com/axerunners/dev-docs/issues/new) or [pull request](https://github.com/axerunners/dev-docs/compare).
 
