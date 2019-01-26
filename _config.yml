@@ -91,6 +91,7 @@ aliases:
   CodeShark: Eric Lombrozo
   saracen: Satoshi Nakamoto
   theuni: Cory Fields
+  charlie137: Kirill Orlov
 
 safe:        false
 port: 4000
