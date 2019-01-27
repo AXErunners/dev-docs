@@ -271,7 +271,7 @@ http://opensource.org/licenses/MIT.
 [bitcoinpdf]: https://bitcoin.org/en/bitcoin-paper
 [choose your wallet]: https://www.axe.org/wallets/
 [communities]: https://www.axe.org/community/
-[core executable]: https://www.axe.org/wallets/#wallets
+[core executable]: https://axerunners.com/#core
 [dev communities]: https://www.axe.org/community/
 [developer documentation]: /en/developer-documentation
 [devex complex raw transaction]: /en/developer-examples#complex-raw-transaction
