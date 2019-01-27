@@ -269,10 +269,10 @@ http://opensource.org/licenses/MIT.
 
 [axed initial setup]: /en/developer-examples
 [bitcoinpdf]: https://bitcoin.org/en/bitcoin-paper
-[choose your wallet]: https://www.axe.org/wallets/
-[communities]: https://www.axe.org/community/
+[choose your wallet]: https://www.axerunners.com/wallets/
+[communities]: https://www.axerunners.com/community/
 [core executable]: https://axerunners.com/#core
-[dev communities]: https://www.axe.org/community/
+[dev communities]: https://www.axerunners.com/community/
 [developer documentation]: /en/developer-documentation
 [devex complex raw transaction]: /en/developer-examples#complex-raw-transaction
 [devexamples]: /en/developer-examples
@@ -421,7 +421,7 @@ http://opensource.org/licenses/MIT.
 [Eloipool]: https://github.com/luke-jr/eloipool
 [errors in docs]: https://github.com/axe-docs/axe-docs/issues?q=is%3Aissue+label%3A%22Dev+Docs%22
 [fake satoshi transaction]: https://www.reddit.com/r/Bitcoin/comments/3fv42j/blockchaininfo_spoofed_transactions_problem_aug_4/
-[forum tech support]: https://www.axe.org/forum/categories/axe-support.61/
+[forum tech support]: https://www.axerunners.com/forum/categories/axe-support.61/
 [ghash betcoin double spend]: https://bitcointalk.org/index.php?topic=321630.msg3445371
 [gitian sigs]: https://github.com/bitcoin/gitian.sigs
 [high-speed block relay network]: https://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg03189.html

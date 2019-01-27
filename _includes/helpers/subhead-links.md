@@ -5,7 +5,7 @@ http://opensource.org/licenses/MIT.
 ><a href="https://github.com/axe-docs/axe-docs/edit/master/{{filename|uri_escape}}">Edit</a>
 | <a href="https://github.com/axe-docs/axe-docs/commits/master/{{filename|uri_escape}}">History</a>
 | <a href="https://github.com/axe-docs/axe-docs/issues/new?body=Source%20File%3A%20{{filename|uri_escape}}%0A%0A">Report Issue</a>
-| <a href="https://www.axe.org/forum/">Discuss</a></div>
+| <a href="https://www.axerunners.com/forum/">Discuss</a></div>
 {% else %}
 {% die "source filename not set" %}
 {% endif %}
