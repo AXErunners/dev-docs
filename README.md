@@ -1,4 +1,4 @@
-# AXE dev-docs Codebase
+# AXE dev-docs codebase
 
 ![Build Status](https://api.travis-ci.com/AXErunners/dev-docs.svg?branch=master)
 
